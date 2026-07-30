@@ -14,23 +14,23 @@ public class CalcServiceTest {
     // テスト対象のクラスをインスタンス化
     private final CalcService calcService = new CalcService();
 
-    @Test
-    @DisplayName("正常系: 2 + 3 が 5 になること")
-    void testExecuteAddition() {
-        // 実行 (Act) & 検証 (Assert)
-        int result = calcService.execute(2, 3, "+");
-        // 意図的にテストを失敗させる
-        assertEquals(4, result);
-    }
-
     // @Test
     // @DisplayName("正常系: 2 + 3 が 5 になること")
     // void testExecuteAddition() {
     // // 実行 (Act) & 検証 (Assert)
     // int result = calcService.execute(2, 3, "+");
-    // // 結果が期待値と等しいことを検証
-    // assertEquals(5, result);
+    // // 意図的にテストを失敗させる
+    // assertEquals(4, result);
     // }
+
+    @Test
+    @DisplayName("正常系: 2 + 3 が 5 になること")
+    void testExecuteAddition() {
+        // 実行 (Act) & 検証 (Assert)
+        int result = calcService.execute(2, 3, "+");
+        // 結果が期待値と等しいことを検証
+        assertEquals(5, result);
+    }
 
     @Test
     @DisplayName("正常系: 10 - 4 が 6 になること")

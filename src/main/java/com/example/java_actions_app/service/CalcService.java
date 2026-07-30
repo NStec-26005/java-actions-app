@@ -1,6 +1,7 @@
 package com.example.java_actions_app.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * 計算サービスクラス
@@ -16,6 +17,13 @@ public class CalcService {
      * @return 計算結果
      * @throws IllegalArgumentException 不正な演算子やゼロでの割りが発生した場合
      */
+    
+     // わざとインデントを崩す例
+    @GetMapping("/calc")
+public String showForm() {
+            return "calc"; 
+    }
+
     public int execute(int value1, int value2, String operator) {
         switch (operator) {
             case "+":
